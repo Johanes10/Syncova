@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-aside: #2C3E50 ; 
+    --color-navbar: #1F2A38; 
+    --color-fondo: #F4F7F6 ;
+    --bs-dropdown-link-active-bg: #198754;
+
+}
+nav{
+    background: var(--color-navbar);
+    color:var(--color-fondo);
+}
+.nav-link,.navbar-brand{
+    color:var(--color-fondo)
+}
+.form-control  {
+    width: 450px; /* Ajusta el valor según sea necesario */
+    margin: 0 auto; /* Centra la navbar */
+}
+aside{
+    background: var(--color-aside);
+    width: 30%;
+}
+
+
+main{
+    min-height: 82vh;
+}
+footer {
+    background-color: #34495E ; /* Cor de fundo para o footer */
+    color: white; /* Cor do texto no footer */
+    text-align: center;
+    padding: 10px;
+    min-height: 10vh;
+}
+
+
+.carousel-inner img , .card img{
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  }
+  .carousel-item {
+    position: relative; /* Necessário para posicionar o caption sobre a imagem */
+}
+  .carousel-caption {
+    position: absolute; /* Faz o texto flutuar sobre a imagem */
+    bottom: 20px; /* Espaço do fundo da imagem */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para ficar centralizado */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para legibilidade */
+    padding: 10px; /* Adiciona espaço interno ao contêiner do texto */
+    border-radius: 5px; /* Arredonda os cantos do fundo */
+}
+
+.nav-link:active,.link:active {
+    background-color: #198754; /* Cambia el fondo cuando se hace clic */
+    color: #198754; /* Cambia el color del texto cuando está oprimido */
+}
+
+.card {
+    overflow: hidden; /* Evita que el ícono salga de la card */
+    position: relative; /* Necesario para el posicionamiento del ícono */
+}
+
+.play-icon {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem; /* Ajusta el tamaño del ícono */
+    color: #813291; /* Color del ícono */
+    opacity: 0; /* Comienza invisible */
+    transition: opacity 0.3s ease; /* Suaviza la transición */
+}
+
+.card:hover .play-icon ,.carousel:hover{
+    cursor: pointer;
+    opacity: 1; /* Muestra el ícono al hacer hover */
+    box-shadow: #1F2A38;
+    
+}
+.nav-link:hover{
+    cursor: pointer;
+    background-color: slategrey;
+}
